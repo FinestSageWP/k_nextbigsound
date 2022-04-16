@@ -1,0 +1,85 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Combined Chart
+{% endblock %}
+
+{% block main %}
+    <div class="pt-5 px-4 container-fluid-sm">
+        <h1 class="display-3 portrait">2021 Combined Chart Points Tally</h1>
+        <h1 class="display-5 landscape">2021 Combined Chart Points Tally</h1>
+        <p class="lead">This chart is measures the <b><u>weighted</u></b> performance of KPOP artists on popular social media platforms.
+        <p>This includes <a href="http://twitter.com">Twitter</a> mentions, retweets and followers as well as <a href="http://facebook.com">Facebook</a>
+        page likes <br> and <a href="http://en.wikipedia.org">Wikipedia</a> page views. These data are all compiled by <a href="https://www.nextbigsound.com">nextbigsound.com</a></p>
+        </p>
+    </div>
+    <div class="container center p-1">
+        <form action="/smi" method="get">
+            <div class="form-row row justify-content-center container-sm">
+                <div class="col-auto my-1 mb-0 form-group">
+                    <select class="fselect mx-auto w-auto" name="sort">
+                        <option disabled selected>Sort by</option>
+                        <option value="artist">KPOP Artist</option>
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov_dec">November-December</option>
+                        <option value="else">Total</option>
+                    </select>
+                </div>
+                <div class="col-auto my-1 mb-0 form-group">
+                    <button class="btn btn-primary" type="submit">Sort</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="summary" class="pt-3 pb-5 m-5">
+        <table class="table table-striped table-bordered table-sm table-hover thead-light table-responsive-sm" cellspacing="0">
+            <thead>
+                <tr>
+                    <th class="text-start">#</th>
+                    <th class="text-start text-left artist-{{ sort }}">KPOP Artist</th>
+                    <th class="text-end jan-{{ sort }}">January</th>
+                    <th class="text-end feb-{{ sort }}">February</th>
+                    <th class="text-end mar-{{ sort }}">March</th>
+                    <th class="text-end apr-{{ sort }}">April</th>
+                    <th class="text-end may-{{ sort }}">May</th>
+                    <th class="text-end jun-{{ sort }}">June</th>
+                    <th class="text-end jul-{{ sort }}">July</th>
+                    <th class="text-end aug-{{ sort }}">August</th>
+                    <th class="text-end sep-{{ sort }}">September</th>
+                    <th class="text-end oct-{{ sort }}">October</th>
+                    <th class="text-end nov_dec-{{ sort }}">Nov-Dec</th>
+                    <th class="text-end else-{{ sort }}">Total</th>
+                </tr>
+            </thead>
+           <tbody>
+                {% for social in socials %}
+                    <tr>
+                        <td class="text-start">{{ loop.index }}</td>
+                        <td class="text-start text-left artist-{{ sort }}{{ loop.index % 2}}">{{ social["artist"] }}</td>
+                        <td class="text-end jan-{{ sort }}{{ loop.index % 2}}">{{ social["jan"] | num }}</td>
+                        <td class="text-end feb-{{ sort }}{{ loop.index % 2}}">{{ social["feb"] | num }}</td>
+                        <td class="text-end mar-{{ sort }}{{ loop.index % 2}}">{{ social["mar"] | num}}</td>
+                        <td class="text-end apr-{{ sort }}{{ loop.index % 2}}">{{ social["apr"] | num}}</td>
+                        <td class="text-end may-{{ sort }}{{ loop.index % 2}}">{{ social["may"] | num}}</td>
+                        <td class="text-end jun-{{ sort }}{{ loop.index % 2}}">{{ social["jun"] | num}}</td>
+                        <td class="text-end jul-{{ sort }}{{ loop.index % 2}}">{{ social["jul"] | num}}</td>
+                        <td class="text-end aug-{{ sort }}{{ loop.index % 2}}">{{ social["aug"] | num}}</td>
+                        <td class="text-end sep-{{ sort }}{{ loop.index % 2}}">{{ social["sep"] | num}}</td>
+                        <td class="text-end oct-{{ sort }}{{ loop.index % 2}}">{{ social["oct"] | num}}</td>
+                        <td class="text-end nov_dec-{{ sort }}{{ loop.index % 2}}">{{ social["nov_dec"] | num}}</td>
+                        <td class="text-end else-{{ sort }}{{ loop.index % 2}}">{{ social["total"] | num}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <div class="pt-5 px-4 container-fluid-sm">
+        <h1 class="display-3 portrait">Search for Data</h1>
+        <h1 class="display-5 landscape">Search</h1>
+        <p class="lead">This is the summary of the performances of KPOP Artsists on <a href="https://www.nextbigsound.com">nextbigsound.com</a>, a data analytics website. <br></p>
+        <p>Data exclusively for Korean artists were personally compiled by Jeremiah Daniel A. Regalario then published <br>
+        the analyzed data on a Twitter data chart account <a href="https://www.twitter.com/k_nextbigsound">@k_nextbigsound</a> weekly.
+        </p>
+    </div>
+    <div class="container center p-5">
+        <form action="/search" method="post">
+            <div class="form-row row justify-content-center container-sm">
+                <div class="col-auto my-1 mb-0 form-group">
+                    <select class="fselect mx-auto w-auto" name="artist">
+                        <option disabled selected>Select Artist</option>
+                        {% for artist in artists %}
+                            <option value="{{ artist["artist"] }}">{{ artist["artist"] }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <div class="col-auto my-1 mb-0 form-group">
+                    <select class="fselect mx-auto w-auto" name="chart">
+                        <option disabled selected>Select Chart</option>
+                        <option value="smi">Social Metrics Index</option>
+                        <option value="cmb">Combined Chart</option>
+                        <option value="ind">Summary Index</option>
+                    </select>
+                </div>
+                <div class="col-auto my-1 mb-0 form-group">
+                    <select class="fselect mx-auto w-auto" name="month">
+                        <option disabled selected>Select Month</option>
+                        <option value="jan">January</option>
+                        <option value="feb">February</option>
+                        <option value="mar">March</option>
+                        <option value="apr">April</option>
+                        <option value="may">May</option>
+                        <option value="jun">June</option>
+                        <option value="jul">July</option>
+                        <option value="aug">August</option>
+                        <option value="sep">September</option>
+                        <option value="oct">October</option>
+                        <option value="nov_dec">November-December</option>
+                        <option value="total">Overall</option>
+                    </select>
+                </div>
+                <div class="col-auto my-1 mb-0 form-group">
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

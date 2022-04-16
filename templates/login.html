@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <div class="row kpop">
+        <div class="col-sm-8 p-5">
+            <h1 class="display-3">Welcome!</h1>
+            <p class="lead">Compilation of KPOP Artists' Social Metrics in 2021.</p>
+            <img class="img-fluid pb-3" src="static/pic.png" alt="Pic">
+        </div>
+
+        <div class="col-sm-4 p-5">
+            <div class="card">
+                <div class="card-header bolden">
+                    Access Data
+                </div>
+                <div class="card-body">
+                    <p class="lead">You need to log in first.</p>
+                    <br>
+                    <form action="/login" method="post">
+                        <div class="form-group">
+                            <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" name="password" placeholder="Password" type="password">
+                        </div>
+                        <button class="btn btn-primary" type="submit">Log In</button>
+                    </form>
+                    <br>
+                    <p>New here? <a href="/register">Sign up</a> for an account first</p>
+                </div>
+            </div>
+        </div>
+    </div
+{% endblock %}

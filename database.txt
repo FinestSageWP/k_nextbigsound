@@ -1,0 +1,44 @@
+CREATE TABLE nbs (
+    id INTEGER,
+    artist TEXT NOT NULL,
+    smi INTEGER NOT NULL,
+    cmb INTEGER NOT NULL,
+    ind NUMERIC NOT NULL,
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE smi (
+    id INTEGER,
+    artist_id INTEGER NOT NULL,
+    jan INTEGER NOT NULL,
+    feb INTEGER NOT NULL,
+    mar INTEGER NOT NULL,
+    apr INTEGER NOT NULL,
+    may INTEGER NOT NULL,
+    jun INTEGER NOT NULL,
+    jul INTEGER NOT NULL,
+    aug INTEGER NOT NULL,
+    sep INTEGER NOT NULL,
+    oct INTEGER NOT NULL,
+    nov_dec INTEGER NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(artist_id) REFERENCES nbs(id)
+);
+
+CREATE TABLE cmb (
+    id INTEGER,
+    artist_id INTEGER NOT NULL,
+    jan INTEGER NOT NULL,
+    feb INTEGER NOT NULL,
+    mar INTEGER NOT NULL,
+    apr INTEGER NOT NULL,
+    may INTEGER NOT NULL,
+    jun INTEGER NOT NULL,
+    jul INTEGER NOT NULL,
+    aug INTEGER NOT NULL,
+    sep INTEGER NOT NULL,
+    oct INTEGER NOT NULL,
+    nov_dec INTEGER NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY(artist_id) REFERENCES nbs(id)
+);

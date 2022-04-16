@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Searched
+{% endblock %}
+
+{% block main %}
+    <div class="p-5 kpop">
+        <h1 class="display-4 gilroy pt-5"><span class="badge badge-secondary">{{ artist }}</span></h1>
+        <h1 class="display-1 gil pb-5">{{ num(info) }} </h1>
+        <p class="lead p-5">Data from <b>{{ charts[chart] }}</b> for the month of <b>{{ months[month] }}</b></p>
+    </div>
+{% endblock %}

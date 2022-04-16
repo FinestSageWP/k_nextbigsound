@@ -1,0 +1,163 @@
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    font-family: Segoe UI;
+    font-weight: 700;
+}
+
+.display-1 {
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* Center form controls */
+    display: inline-block;
+
+    /* Override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main
+{
+    /* Scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* Center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* Constrain images on small screens */
+    max-width: 100%;
+}
+
+.end
+{
+    text-align: right!important;
+}
+
+.bolden
+{
+    font-weight: 700!important;
+    color: #555!important;
+}
+
+.fselect
+{
+    display: block;
+    width: 100%;
+    padding: .375rem 2.25rem .375rem .75rem;
+    -moz-padding-start: calc(0.75rem - 3px);
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.white {
+    color: #fff!important;
+}
+
+body {
+    background-image: url(../static/bg.png);
+    background-repeat: repeat-x;
+    background-position: 0 40px;
+}
+
+.kpop {
+    background-image: url(../static/bg2.png);
+    background-size: cover;
+}
+
+.kpop img {
+    width: 80%;
+}
+
+.imgbrand {
+    max-height: 20px;
+    width: auto;
+} 
+
+@media (orientation: portrait) {
+    .portrait {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) {
+    .landscape {
+        display: none;
+    }
+}
+
+.artist-artist, .jan-jan, .feb-feb, .mar-mar, .apr-apr, .may-may, .jun-jun, .jul-jul, .aug-aug, .sep-sep, .oct-oct, .nov_dec-nov_dec, .else-else, .smi-smi, .cmb-cmb {
+    background-color: #555!important;
+    color: #fff!important;
+}
+
+.artist-artist0, .jan-jan0, .feb-feb0, .mar-mar0, .apr-apr0, .may-may0, .jun-jun0, .jul-jul0, .aug-aug0, .sep-sep0, .oct-oct0, .nov_dec-nov_dec0, .else-else0, .smi-smi0, .cmb-cmb0 {
+    background-color: #eee;
+    color: #333;
+}
+
+.artist-artist1, .jan-jan1, .feb-feb1, .mar-mar1, .apr-apr1, .may-may1, .jun-jun1, .jul-jul1, .aug-aug1, .sep-sep1, .oct-oct1, .nov_dec-nov_dec1, .else-else1, .smi-smi1, .cmb-cmb1 {
+    background-color: #ddd;
+    color: #333;
+}
+
+@font-face {
+    font-family: Gilroy;
+    src: url(gilroy-extrabold.otf);
+}
+
+@font-face {
+    font-family: Gil;
+    src: url(gilroy-light.otf);
+}
+
+.gilroy {
+    font-family: Gilroy, sans-serif;
+}
+
+.gil {
+    font-family: Gil, sans-serif;
+}
+
+.halfed {
+    max-width: 50vw;
+}
+
+.maxed {
+    max-width: 70vw;
+}
