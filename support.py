@@ -3,8 +3,7 @@ from cs50 import SQL
 from helpers import get
 
 if __name__ == '__main__':
-    
-    
+
     db = SQL('sqlite:///nbs.db')
     
     artist = 'BLACKPINK'
