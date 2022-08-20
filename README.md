@@ -14,16 +14,16 @@
 ##### This renders the login page when the web app prompts for login.
 
 #### `apology.html`
-##### Adapted from CS50 Finance. This renders the apology page when there are errors reported from the web app, specifying the code and the type of error.
+##### This renders the apology page when there are errors reported from the web app, specifying the code and the type of error.
 
 #### `change_pass.html`
 ##### Idea from CS50 Finance. This renders the page where users can change their passwords.
 
 #### `index.html`
-##### This renders the landing page showing the summary of the charts and their ranked tabulation which is sortable by utilizing SQLite3 and JQuery.
+##### This renders the landing page showing the summary of the charts and their ranked tabulation which is sortable by utilizing PostgreSQL and JQuery.
 
 #### `smi.html`
-##### This renders the breakdown of the Social Metrics Chart every month of 2021 which is sortable as well by utilizing SQLite3 and JQuery.
+##### This renders the breakdown of the Social Metrics Chart every month of 2021 which is sortable as well by utilizing PostgreSQL and JQuery.
 
 #### `cmb.html`
 ##### This renders the breakdown of the Combined Chart every month of 2021 which is sortable as well by utilizing PostgreSQL and JQuery.
@@ -49,7 +49,7 @@
 ##### An aiding program to the `application.py` which contains helping functions for convenient coding.
 
 #### `nbs.db`
-##### SQlite3 database that stores data of Next Big Sound web app and returns valus when queried nby user
+##### PostgreSQL database that stores data of Next Big Sound web app and returns valus when queried nby user
 
 #### `accounts.db`
 ##### PostgreSQL database that stores data of accounts that signs in the web app
