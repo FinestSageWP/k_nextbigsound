@@ -57,7 +57,6 @@ if __name__ == '__main__':
         db.execute('INSERT INTO smi (artist_id, jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov_dec) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', artist_id, jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov_dec)
     
     
-    
     # Open the csv file
     with open('nbs.csv', 'r') as file:
         reader = DictReader(file)
