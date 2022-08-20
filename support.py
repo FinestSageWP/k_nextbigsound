@@ -15,7 +15,7 @@ if __name__ == '__main__':
     exe = db.execute(info)
     
     print(exe)
-    """
+    
     # Open the csv file
     with open('cmb.csv', 'r') as file:
         reader = DictReader(file)
@@ -70,4 +70,4 @@ if __name__ == '__main__':
         cmb = info['cmb']
         index = info['index']
         db.execute('INSERT INTO nbs (artist, smi, cmb, ind) VALUES (?, ?, ?, ?)', artist, smi, cmb, index)
-        """
+        
