@@ -1,6 +1,6 @@
 # KPOP Next Big Sound
-#### Video Demo:  https://youtu.be/gHOXCUhQ1-c
-#### Description: A web application based on Flask Web framework that tracks and ranks social metrics and statistics of KPOP artists. This web app utilizes Bootstrap 4.5.3, SQLite3 as database, JavaScript with JQuery and the Jinja2 syntax. I heavily based the structure of my web app on the CS50 Finance problem set since I was fascinated with the logging in and signing up feature. The data used in this were personally compiled by me since year 2020 and it is accessible in nextbigsound.com for free. My web application is essentially helpful for people in the kpop community to help them keep track of their idol's engagement and performance in the different social platforms.
+
+#### Description: A web application utilizing the Python-based web framework Flask, that tracks and ranks social metrics and statistics of KPOP artists. The data used in this were personally compiled by me since year 2020 and 2021 by web-scraping and utilizing API from nextbigsound.com and guyso.me. This web application is essentially helpful for people in the KPOP community to help them keep track of their idol's engagement and performance in the different social platforms. This web app utilizes Bootstrap 4.5.3, PostgreSQL as database and JavaScript with JQuery. It has built-in support feature for logging in/out and signing up as well as changing passwords.
 
 ## Files
 
@@ -26,7 +26,7 @@
 ##### This renders the breakdown of the Social Metrics Chart every month of 2021 which is sortable as well by utilizing SQLite3 and JQuery.
 
 #### `cmb.html`
-##### This renders the breakdown of the Combined Chart every month of 2021 which is sortable as well by utilizing SQLite3 and JQuery.
+##### This renders the breakdown of the Combined Chart every month of 2021 which is sortable as well by utilizing PostgreSQL and JQuery.
 
 #### `search.html`
 ##### Allows the user to search for the specific data that they want by specifying the artist, chart type and the month they are looking for.
@@ -52,10 +52,10 @@
 ##### SQlite3 database that stores data of Next Big Sound web app and returns valus when queried nby user
 
 #### `accounts.db`
-##### SQlite3 database that stores data of accounts that signs in the web app
+##### PostgreSQL database that stores data of accounts that signs in the web app
 
 #### `requirements.txt`
-##### Adapted fron CS50 finance. Written here are the required libraries/frameworks for the web app.
+##### Written here are the required libraries/frameworks for the web app.
 
 
 

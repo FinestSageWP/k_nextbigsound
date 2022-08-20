@@ -1,8 +1,7 @@
 """ KPOP Next Big Sound - Web Application for Social Metrics of KPOP Artists"""
-""" Official Final Project of Jeremiah Daniel A. Regalario for Harvard's CS50x 2021"""
+""" Official Final Project of Team TEN BILLION POINTS for BreederDAO Hackathon 2022"""
 
 import os
-
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
 from flask_session import Session
