@@ -3,8 +3,7 @@ from cs50 import SQL
 from helpers import get
 
 if __name__ == '__main__':
-    
-    
+
     db = SQL('sqlite:///nbs.db')
     
     artist = 'BLACKPINK'
@@ -15,7 +14,7 @@ if __name__ == '__main__':
     exe = db.execute(info)
     
     print(exe)
-    """
+    
     # Open the csv file
     with open('cmb.csv', 'r') as file:
         reader = DictReader(file)
@@ -58,7 +57,6 @@ if __name__ == '__main__':
         db.execute('INSERT INTO smi (artist_id, jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov_dec) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)', artist_id, jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov_dec)
     
     
-    
     # Open the csv file
     with open('nbs.csv', 'r') as file:
         reader = DictReader(file)
@@ -70,4 +68,4 @@ if __name__ == '__main__':
         cmb = info['cmb']
         index = info['index']
         db.execute('INSERT INTO nbs (artist, smi, cmb, ind) VALUES (?, ?, ?, ?)', artist, smi, cmb, index)
-        """
+        
